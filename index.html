@@ -1,46 +1,52 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- reset browser styles --> 
-    <link rel="assets/stylesheet" type="text/css" media="screen" href="styles/reset.css"/>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="scripts/main.js"></script>
-</head>
+<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>New York Times</title>
+    </head>
 <body>
+ <div id= "header">
+     <h1>New York Times Search</h1>
 
-<script> 
-// https://api.nytimes.com/svc/search/v1/article?format=json&query=smoking&api-key=7485d63379034844ad36212006b2c533
-
-
-    var searchWord ='';
-    var numArticle = 5;
-    var startYear = '';
-    var endYear='';
+ </div>
 
 
-
-    var queryURL = "https://api.nytimes.com/svc/search/v1/article?format=json&query=" +
-    searchStuff + "&api-key=7485d63379034844ad36212006b2c533";
-
-    $.ajax({
-    url: queryURL,
-    method: "GET"
-    }).then(function(response) {
-    var results = response.data;
-
-    
-
-
-</script>
-    
+  <form>
+        <p id="small header"> Search Parameters</p>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Search Term</label>
+          <input type="search" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          
+          <div class="form-group">
+                <label for="exampleSelect1">Example select</label>
+                <select class="form-control" id="exampleSelect1">
+                  <option>1</option>
+                  <option>5</option>
+                  <option>10</option>
+                </select>
+              </div>
+              <label for="exampleInputEmail1">Start Year (Optional)</label>
+              <input type="search" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <label for="exampleInputEmail1">End Year (Optional)</label>
+          <input type="search" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <button type="submit" class="btn btn-primary" id="search">Submit</button>
+        <button type="Clear" class="btn btn-primary" id="Clear">Clear</button>
+      </form>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script type="text/javascript" src="nyt.js"></script>
 </body>
+
+
+
+
 </html>
